@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--处理器适配器，由他来执行特定的处理器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+    <!--处理器映射器，将bean name当做url进行查找-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+    <!---->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+    <!--处理器handler-->
+    <bean name="/queryItems.action" class="cn.itcast.ssm.controller.ItemsController01"></bean>
+
+
+</beans>
